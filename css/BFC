@@ -1,0 +1,28 @@
+Block Formatting Context
+块级格式上下文
+页面中的一个渲染区域，定义了子元素如何定位，以及和其他元素的关系和作用
+
+特点：
+    开启了BFC的元素是一个独立的区域，里面的内容不会在布局上影响到外面的元素。
+
+
+如何让一个元素触发BFC
+    Body根元素
+    设置float且值不是none
+    设置绝对定位：position: absolute,fixed
+    display: inline-block、tabel-cells、flex
+    overflow: hidden/auto/scroll
+
+平时的用处：
+    1、处在同一个bfc中的元素margin会折叠，
+        将他们放到不同的块中去除重叠
+
+    2、清除浮动
+        子元素浮动后，父元素高度坍塌，设置overflow:hidden 清除浮动
+
+    3、防止浮动元素被包裹
+        设置overflow：hidden
+
+
+
+
